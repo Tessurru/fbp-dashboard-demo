@@ -1,0 +1,23 @@
+:root { --ink:#16241f; --muted:#5d6b65; --bg:#f2f5f3; --card:#fff; --good:#1f6f54; --mid:#c98a1b; --low:#b5443a; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.5 "Segoe UI", Roboto, system-ui, sans-serif; }
+main { max-width:1100px; margin:0 auto; padding:16px; }
+h1 { font-size:1.6rem; margin:0; } h2 { font-size:1.1rem; margin:0 0 12px; }
+header { display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; margin:8px 0 16px; }
+.notice { background:#fff3d6; border-left:4px solid var(--mid); padding:8px 12px; margin:0; font-size:.9rem; }
+.filters { display:flex; gap:8px; }
+select { padding:8px 10px; border:1px solid #c5cfca; border-radius:6px; background:#fff; font:inherit; }
+select:focus-visible { outline:2px solid var(--good); outline-offset:2px; }
+.kpis { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:12px; margin-bottom:16px; }
+.kpis > div { background:var(--card); border-radius:10px; padding:14px 16px; display:flex; flex-direction:column; justify-content:center; }
+.kpis strong { font-size:1.7rem; line-height:1.1; } .kpis span { color:var(--muted); }
+.score { color:#fff; } .score span, .score small { color:#fff; opacity:.92; }
+.score.good { background:var(--good); } .score.mid { background:var(--mid); } .score.low { background:var(--low); }
+.big { font-size:3rem; font-weight:700; line-height:1; }
+.card { background:var(--card); border-radius:10px; padding:16px; margin-bottom:16px; }
+.scroll { overflow-x:auto; } table { width:100%; border-collapse:collapse; min-width:560px; }
+th, td { text-align:left; padding:8px; border-bottom:1px solid #e3e9e5; } th { color:var(--muted); font-weight:600; }
+.rate { position:relative; min-width:130px; } .rate .bar { position:absolute; left:0; top:6px; bottom:6px; opacity:.22; border-radius:4px; }
+.bar.good { background:var(--good); } .bar.mid { background:var(--mid); } .bar.low { background:var(--low); }
+.error, .loading { padding:24px; text-align:center; } .error { color:var(--low); }
+@media (max-width:700px) { .kpis { grid-template-columns:1fr 1fr; } .score { grid-column:1 / -1; } }
